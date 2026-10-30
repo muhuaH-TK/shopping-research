@@ -2,7 +2,7 @@
 
 [中文](README.md) | [English](README.en.md)
 
-**Version: v1.2.3**
+**Version: v1.3.0 · Trial** · [Changelog](CHANGELOG.md) · [Validation scope](VALIDATION.md)
 
 A Codex skill for consumer purchase decisions. It researches products against the intended use, budget, and hard constraints, checking quality, safety, prices, customer feedback, long-term costs, and company practices. The result identifies specific versions, purchasing channels, material trade-offs, and evidence gaps.
 
@@ -83,6 +83,16 @@ Farmer-support products are listed separately. They are not compared, scored, or
 
 ## Installation
 
+### Workbook, review, and default archiving
+
+Each delivery saves the complete report, [research workbook/evidence index](skills/shopping-research/references/research-workbook.md), review record, and version/acceptance record by default, then checks the actual saved files. A reviewer in a separate context first reads the request and raw evidence, then compares the draft. If independent review is unavailable, same-agent review and its reason are disclosed. Material disagreements must be resolved or retain purchase limitations; averaging scores cannot hide them.
+
+The [review and archiving rules](skills/shopping-research/references/review-and-archive.md) use a writable project/task output directory. Failed saves report the actual scope saved. Individual fields distinguish newly checked, reused, expired, and pending evidence; refreshing one quote does not refresh all other data.
+
+[Category cards](skills/shopping-research/references/category-cards.md) cover pillows, personal care, electrical products, and cycling equipment. They guide evidence collection and limits, rather than providing brand lists, certification quotas, or verified product lists.
+
+### Installation options
+
 In an environment supporting Codex skills, use the built-in `$skill-installer` with a request such as:
 
 ```text
@@ -114,6 +124,10 @@ You can also provide existing candidates, product links, screenshots, or an earl
 ```text
 README.md
 README.en.md
+LICENSE
+CHANGELOG.md
+VALIDATION.md
+tests/                  # Clearly fictional fixtures and observed scoring runs
 skills/
   shopping-research/
     SKILL.md
@@ -122,3 +136,9 @@ skills/
 ```
 
 See [adapted-methods.md](skills/shopping-research/references/adapted-methods.md) for method references and adoption boundaries. External references do not grant access to their services or imply that this repository inherits an external project's license.
+
+## Tests and license
+
+The [fixed tests](tests/README.md) check scoring and status consistency. Complete inputs, acceptance criteria, and observed runs are stored separately; blind evaluators do not receive expected answers. Real shopping requests, reports, evidence, and ordinary-search comparisons remain internal and are not published as cases. See [validation scope](VALIDATION.md) for observed, failed, and unverified checks. Complete instructions do not establish purchase-ready capability.
+
+Original content that the project can license, including its skill, templates, and fictional tests, uses the [MIT license](LICENSE), copyright muhuaH-TK. Third-party quotations and product materials retain separate source attribution and are not relicensed by this project.

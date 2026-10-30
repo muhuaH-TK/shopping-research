@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "observed_runs": 3,
+  "issues": [
+    {
+      "id": "R3-SEM-001",
+      "fixture_id": "F2",
+      "run_id": "F2-A",
+      "candidate_id": "F2-A",
+      "field": "candidates[F2-A].dimensions.quality.reason",
+      "source_ids": ["F2-A-1"],
+      "observed": "标签0.8mm与实测0.6mm相比少25%（分母为标签0.8mm）",
+      "source_fact": "标签材料厚度0.8mm，10件实际均值0.6mm，复测一致；实测比标签低0.2mm，以标签0.8mm为分母低25%。",
+      "reason": "该句语法主语是标签，字面表达标签比实测少25%，与0.8>0.6相反；至少是影响关键反证方向的实质歧义。分母括注及其他字段的正确表达不能覆盖该字段自身矛盾。",
+      "impact": "本轮负面事件字段和numeric_basis已正确，6分及8→6、加权减少7仍正确；问题为局部事实表达，不能仅因机器或算式通过而豁免。独立第二读者确认同一问题。",
+      "disposition": "保留r2失败、r2原件和r3原输出，不改句子、分数、规则或阈值。这是最后定向复测，最终记录失败，不再追加第四轮。"
+    }
+  ],
+  "output_hashes": {
+    "F2-A.json": "3c0a87493f59254df2694d447b249e3c36057f3d0a07fca4e9cd78e576a2a426",
+    "F2-B.json": "ee789f498823c74f798b494c48a45673ce62f5878a4e24b79a93ae813354e47c",
+    "F2-C.json": "587d92a94f53fc53c79eb187810f7e12709363c62abd702595bfc29a67ba21ed"
+  }
+}

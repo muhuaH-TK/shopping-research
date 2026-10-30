@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shopping research fixed-material scoring result",
+  "type": "object",
+  "required": ["fixture_id", "run_id", "input_hash", "skill_hash", "execution", "anchors", "candidates", "comparison"],
+  "properties": {
+    "fixture_id": {"enum": ["F1", "F2", "F3", "F4", "F5"]},
+    "run_id": {"type": "string", "minLength": 1},
+    "input_hash": {"type": "string", "minLength": 1},
+    "skill_hash": {"type": "string", "minLength": 1},
+    "execution": {"type": "object", "required": ["date", "context", "configuration", "observed_scope"], "properties": {"date": {"type": "string"}, "context": {"type": "string"}, "configuration": {"type": "string"}, "observed_scope": {"type": "string"}}},
+    "anchors": {"type": "object", "description": "研究前按需求和指标确定的0/5/10锚点；不得以未知、资料数量或品牌知名度代替表现。"},
+    "candidates": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "dimensions", "safety", "purchase_status", "status_reason", "negative_events", "aggregate"],
+        "properties": {
+          "candidate_id": {"type": "string"},
+          "dimensions": {
+            "type": "object", "required": ["quality", "fit", "value", "long_term_cost", "after_sales", "rd_marketing", "labor"],
+            "additionalProperties": false,
+            "properties": {
+              "quality": {"$ref": "#/$defs/dimension"}, "fit": {"$ref": "#/$defs/dimension"}, "value": {"$ref": "#/$defs/dimension"},
+              "long_term_cost": {"$ref": "#/$defs/dimension"}, "after_sales": {"$ref": "#/$defs/dimension"},
+              "rd_marketing": {"$ref": "#/$defs/dimension"}, "labor": {"$ref": "#/$defs/dimension"}
+            }
+          },
+          "safety": {"type": "array", "items": {"type": "object", "required": ["item", "state", "evidence_ids", "reason"], "properties": {"item": {"type": "string"}, "state": {"enum": ["通过", "待核", "不满足", "不适用"]}, "evidence_ids": {"type": "array", "items": {"type": "string"}}, "reason": {"type": "string"}}}},
+          "purchase_status": {"enum": ["可进入购买决策", "仅适合优先核验", "证据不足，暂不排序", "不符合本次购买条件", "排除购买"]},
+          "status_reason": {"type": "string"},
+          "negative_events": {"type": "array", "items": {"type": "object", "required": ["event_id", "evidence_ids", "primary_dimension", "before", "after", "reason", "other_consequences"], "properties": {"event_id": {"type": "string"}, "evidence_ids": {"type": "array", "items": {"type": "string"}}, "primary_dimension": {"type": "string"}, "before": {"type": ["number", "null"]}, "after": {"type": ["number", "null"]}, "reason": {"type": "string"}, "other_consequences": {"type": "array", "items": {"type": "string"}}}}},
+          "aggregate": {"type": "object", "required": ["kind", "numerator", "denominator", "included_dimensions", "formula"], "properties": {"kind": {"enum": ["complete", "partial", "not_scored"]}, "numerator": {"type": ["number", "null"]}, "denominator": {"type": ["number", "null"]}, "included_dimensions": {"type": "array", "items": {"type": "string"}}, "formula": {"type": "string"}}},
+          "recommendation": {"type": "object", "properties": {"score": {"type": ["number", "null"], "minimum": 0, "maximum": 10}, "nature": {"type": "string"}, "reason": {"type": "string"}, "change_conditions": {"type": "array", "items": {"type": "string"}}}}
+        }
+      }
+    },
+    "comparison": {"type": "object", "required": ["order_type", "candidate_order", "reason", "unresolved"], "properties": {"order_type": {"enum": ["conditional", "comparable_subset", "no_overall_order", "overall_with_conditions"]}, "candidate_order": {"type": "array", "items": {"type": "string"}}, "reason": {"type": "string"}, "unresolved": {"type": "array", "items": {"type": "string"}}}}
+  },
+  "$defs": {"dimension": {"type": "object", "required": ["score", "weight", "evidence_ids", "reason", "evidence_state"], "properties": {"score": {"type": ["number", "null"], "minimum": 0, "maximum": 10}, "weight": {"type": "number"}, "evidence_ids": {"type": "array", "items": {"type": "string"}}, "reason": {"type": "string"}, "evidence_state": {"type": "string"}}}}
+}

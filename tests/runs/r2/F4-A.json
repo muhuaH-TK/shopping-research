@@ -1,0 +1,398 @@
+{
+  "fixture_id": "F4",
+  "run_id": "F4-A",
+  "input_hash": "ba47b1fa955ae16b4994a1561a09ae5d374b99e453ac0405866cc3a42dcfa298",
+  "skill_hash": "e5cc1f9a5a61b93c025ff8d8109cd3747031695061e89de762146820cd4d7662",
+  "execution": {
+    "date": "2026-10-30",
+    "timezone": "Asia/Hong_Kong",
+    "context": "新独立上下文；按本题原始记录与共享口径独立评分。",
+    "configuration": "继承默认配置，无显式模型覆盖；精确后端及采样参数未暴露，未知。",
+    "calibration_hash": "06927b3cf22f96a752f4b26405ebbfb0edc8f9adcade4270510e530a41c890cc",
+    "observed_scope": "仅本题固定虚构材料、共享口径及获准技能规则；交易证据日期2026-10-28，本次未联网刷新，未观察客户端触发或核验现实商品。"
+  },
+  "anchors": {
+    "source": "F4共享评分口径卡；仅用于本题固定虚构材料，未知不补分。",
+    "quality": {
+      "0": "同版可复现过热冒烟且未核适用补救。",
+      "5": "可靠性依据充分支持基本使用，但有重要性能取舍。",
+      "8": "耐久/稳定数据足以支持主要目标充分满足。",
+      "10": "有明确可比的显著可靠性优势。",
+      "scope": "工况稳定性、严重失效与可靠性；亮度便利归适配，安全通过不加分。",
+      "na": "仅有亮度、便利和安全符合结果不足整体可靠性；具体安全缺证不作为性能差。"
+    },
+    "fit": {
+      "0": "不支持阅读或操作不可用。",
+      "5": "能用但有重要负担。",
+      "8": "亮度及便利明确满足，无已核显著额外收益。",
+      "10": "同工况有可比的显著阅读和操作优势。",
+      "scope": "正常工况阅读亮度及便利。"
+    },
+    "value": {
+      "0": "必要支出明显不匹配基本效用或无法满足预算。",
+      "5": "基本效用成立，预算占用90%至100%。",
+      "7": "预算占用大于80%小于90%。",
+      "8": "预算占用60%至80%，含端点。",
+      "9": "基本效用可比，预算占用低于60%。",
+      "10": "充分同功能同交易层次证据证明突出优势。",
+      "scope": "同版当期公开价加已知必要费用，对100测试元预算及已核基础功能的限定判断。",
+      "limit": "未复现结算；不声称确定到手价或市场最低。"
+    },
+    "long_term_cost": {
+      "scope": "耗电、电池、维修等持有支出。",
+      "na": "无持有期、用量及费用依据，整维N/A；初购价和零配送不补入。"
+    },
+    "after_sales": {
+      "0": "已核无基本补救或严重拒绝履行且无有效补救。",
+      "5": "7日未使用退货、12个月质量保修的基础条款组合。",
+      "10": "实际执行及维修支持有据，显著高于基础保障。",
+      "scope": "仅评公开退货与质量保修条款；执行、供件及维修未知。"
+    },
+    "rd_marketing": {
+      "scope": "成果及独立宣传兑现。",
+      "na": "材料不足为N/A；不复制同一安全失效。"
+    },
+    "labor": {
+      "scope": "实际用工。",
+      "na": "材料不足为N/A。"
+    },
+    "calculation": "各项weight×score÷10；缺项保留原权重分母，不归一化；不同项目集合不混排。",
+    "safety": "题设T-S1异常充电30分钟内表面≤60°C且无冒烟；T-S2正常工况无导电部件暴露，合计覆盖本题全部关键安全要求。"
+  },
+  "candidates": [
+    {
+      "candidate_id": "F4-A",
+      "version": "灯甲2026电池版",
+      "dimensions": {
+        "quality": {
+          "score": null,
+          "weight": 35,
+          "evidence_ids": [
+            "F4-A-1"
+          ],
+          "reason": "亮度便利及T-S2结果不能替代耐久稳定性依据；T-S1缺证不是质量负面，整体N/A。",
+          "evidence_state": "局部结果已核，整体可靠性依据不足"
+        },
+        "fit": {
+          "score": 8,
+          "weight": 20,
+          "evidence_ids": [
+            "F4-A-1"
+          ],
+          "reason": "正常亮度与使用便利明确满足阅读需求，按共同锚点8分。",
+          "evidence_state": "同版需求表现已核"
+        },
+        "value": {
+          "score": 8,
+          "weight": 15,
+          "evidence_ids": [
+            "F4-A-1",
+            "F4-COMMON-1"
+          ],
+          "reason": "公开价69+已核配送费0=69测试元，占预算69%；按限定公开报价范围评8分。",
+          "evidence_state": "同版当期公开价及必要费用已核，未复现结算"
+        },
+        "long_term_cost": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够耗电、电池、维修及持有情景费用依据，N/A。",
+          "evidence_state": "资料不足"
+        },
+        "after_sales": {
+          "score": 5,
+          "weight": 10,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "7日未使用退货、12个月质量保修，符合基础条款5分；执行和维修支持未知。",
+          "evidence_state": "公开条款已核，实际执行未知"
+        },
+        "rd_marketing": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够成果与宣传兑现材料，N/A。",
+          "evidence_state": "资料不足"
+        },
+        "labor": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够实际用工材料，N/A。",
+          "evidence_state": "资料不足"
+        }
+      },
+      "safety": [
+        {
+          "item": "T-S1：规定充电异常工况30分钟内表面≤60°C且无冒烟",
+          "state": "待核",
+          "evidence_ids": [
+            "F4-A-1"
+          ],
+          "reason": "没有该异常工况测试或足以覆盖的替代结果；电池过热与起火风险实质未明，不能靠短时试用核验。"
+        },
+        {
+          "item": "T-S2：正常工况无导电部件暴露",
+          "state": "通过",
+          "evidence_ids": [
+            "F4-A-1"
+          ],
+          "reason": "题设同版测试明确T-S2通过，保留其正常使用覆盖范围。"
+        }
+      ],
+      "purchase_status": "仅适合优先核验",
+      "status_reason": "核心正常功能、69测试元公开必要支出及交易条款明确，但T-S1关键异常充电安全仍缺证，须取得同版覆盖结果后再判断。",
+      "negative_events": [],
+      "aggregate": {
+        "kind": "partial",
+        "numerator": 33,
+        "denominator": 45,
+        "included_dimensions": [
+          "fit",
+          "value",
+          "after_sales"
+        ],
+        "formula": "20×8/10+15×8/10+10×5/10=33/45（保留原权重，非综合分）"
+      }
+    },
+    {
+      "candidate_id": "F4-B",
+      "version": "灯乙2026电池版",
+      "dimensions": {
+        "quality": {
+          "score": 0,
+          "weight": 35,
+          "evidence_ids": [
+            "F4-B-1"
+          ],
+          "reason": "异常充电20分钟达80°C并冒烟，同版复测一致且无已核补救，达到严重失效0分锚点。",
+          "evidence_state": "同版可复现严重失效"
+        },
+        "fit": {
+          "score": 8,
+          "weight": 20,
+          "evidence_ids": [
+            "F4-B-1"
+          ],
+          "reason": "正常亮度与使用便利明确满足阅读需求，按共同锚点8分。",
+          "evidence_state": "同版需求表现已核"
+        },
+        "value": {
+          "score": 9,
+          "weight": 15,
+          "evidence_ids": [
+            "F4-B-1",
+            "F4-COMMON-1"
+          ],
+          "reason": "公开价49+已核配送费0=49测试元，占预算49%；按限定公开报价范围评9分。 该受限报价分不抵消安全排除。",
+          "evidence_state": "同版当期公开价及必要费用已核，未复现结算"
+        },
+        "long_term_cost": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够耗电、电池、维修及持有情景费用依据，N/A。",
+          "evidence_state": "资料不足"
+        },
+        "after_sales": {
+          "score": 5,
+          "weight": 10,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "7日未使用退货、12个月质量保修，符合基础条款5分；执行和维修支持未知。",
+          "evidence_state": "公开条款已核，实际执行未知"
+        },
+        "rd_marketing": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够成果与宣传兑现材料，N/A。",
+          "evidence_state": "资料不足"
+        },
+        "labor": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够实际用工材料，N/A。",
+          "evidence_state": "资料不足"
+        }
+      },
+      "safety": [
+        {
+          "item": "T-S1：规定充电异常工况30分钟内表面≤60°C且无冒烟",
+          "state": "不满足",
+          "evidence_ids": [
+            "F4-B-1"
+          ],
+          "reason": "第20分钟80°C并冒烟，超60°C限值且违反无冒烟条件；同版复测一致，无适用该批次的已核整改。"
+        },
+        {
+          "item": "T-S2：正常工况无导电部件暴露",
+          "state": "通过",
+          "evidence_ids": [
+            "F4-B-1"
+          ],
+          "reason": "同版完整测试明确T-S2通过；此局部通过不能抵消T-S1失败。"
+        }
+      ],
+      "purchase_status": "排除购买",
+      "status_reason": "已证实同版T-S1关键安全要求失败且无已核适用补救；49测试元低价及其他项目得分不抵消门槛。",
+      "negative_events": [
+        {
+          "event_id": "F4-B-过热冒烟",
+          "evidence_ids": [
+            "F4-B-1"
+          ],
+          "primary_dimension": "quality",
+          "before": null,
+          "after": 0,
+          "reason": "严重失效使质量落0分；没有成立的扣前整体分，扣幅不可计算，不虚构10分起扣。",
+          "other_consequences": [
+            "T-S1不满足，排除购买；这是独立门槛后果，不重复增设数值罚分。"
+          ]
+        }
+      ],
+      "aggregate": {
+        "kind": "partial",
+        "numerator": 34.5,
+        "denominator": 80,
+        "included_dimensions": [
+          "quality",
+          "fit",
+          "value",
+          "after_sales"
+        ],
+        "formula": "35×0/10+20×8/10+15×9/10+10×5/10=34.5/80（保留原权重，非综合分）"
+      }
+    },
+    {
+      "candidate_id": "F4-C",
+      "version": "灯丙2026电池版",
+      "dimensions": {
+        "quality": {
+          "score": null,
+          "weight": 35,
+          "evidence_ids": [
+            "F4-C-1"
+          ],
+          "reason": "验真结果页足以确认两项安全结果，但无足够耐久稳定性依据，整体可靠性N/A；全文未公开不作扣分。",
+          "evidence_state": "局部结果已核，整体可靠性依据不足"
+        },
+        "fit": {
+          "score": 8,
+          "weight": 20,
+          "evidence_ids": [
+            "F4-C-1"
+          ],
+          "reason": "正常亮度与使用便利明确满足阅读需求，按共同锚点8分。",
+          "evidence_state": "同版需求表现已核"
+        },
+        "value": {
+          "score": 8,
+          "weight": 15,
+          "evidence_ids": [
+            "F4-C-1",
+            "F4-COMMON-1"
+          ],
+          "reason": "公开价79+已核配送费0=79测试元，占预算79%；按限定公开报价范围评8分。",
+          "evidence_state": "同版当期公开价及必要费用已核，未复现结算"
+        },
+        "long_term_cost": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够耗电、电池、维修及持有情景费用依据，N/A。",
+          "evidence_state": "资料不足"
+        },
+        "after_sales": {
+          "score": 5,
+          "weight": 10,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "7日未使用退货、12个月质量保修，符合基础条款5分；执行和维修支持未知。",
+          "evidence_state": "公开条款已核，实际执行未知"
+        },
+        "rd_marketing": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够成果与宣传兑现材料，N/A。",
+          "evidence_state": "资料不足"
+        },
+        "labor": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F4-COMMON-1"
+          ],
+          "reason": "无足够实际用工材料，N/A。",
+          "evidence_state": "资料不足"
+        }
+      },
+      "safety": [
+        {
+          "item": "T-S1：规定充电异常工况30分钟内表面≤60°C且无冒烟",
+          "state": "通过",
+          "evidence_ids": [
+            "F4-C-1"
+          ],
+          "reason": "已验真同版结果页明确最高58°C且无冒烟，项目及工况完整覆盖题设要求。"
+        },
+        {
+          "item": "T-S2：正常工况无导电部件暴露",
+          "state": "通过",
+          "evidence_ids": [
+            "F4-C-1"
+          ],
+          "reason": "验真结果页明确无导电部件暴露，覆盖题设正常工况；不因报告全文未公开撤销结果。"
+        }
+      ],
+      "purchase_status": "可进入购买决策",
+      "status_reason": "准确版本、阅读功能、全部题设关键安全及79测试元公开必要支出、现货配送与售后已有足够固定材料；未结算不机械降级，报价仍为公开价。",
+      "negative_events": [],
+      "aggregate": {
+        "kind": "partial",
+        "numerator": 33,
+        "denominator": 45,
+        "included_dimensions": [
+          "fit",
+          "value",
+          "after_sales"
+        ],
+        "formula": "20×8/10+15×8/10+10×5/10=33/45（保留原权重，非综合分）"
+      }
+    }
+  ],
+  "comparison": {
+    "order_type": "conditional",
+    "candidate_order": [
+      "F4-C",
+      "F4-A"
+    ],
+    "reason": "行动顺序为丙进入购买决策、甲仅优先核验；乙排除，不参与购买排序。甲丙相同项目部分分均33/45，乙34.5/80项目集合不同，均不能称综合优劣。",
+    "unresolved": [
+      "甲须取得覆盖同版T-S1异常充电工况的有效结果，不能以个人试用补验。",
+      "甲与丙整体耐久可靠性未知；全部候选长期成本、研发营销和实际用工材料不足。",
+      "仅采用题设当期公开价格及交易范围，未领取优惠或复现结算；未核现实商品或真实电器标准。"
+    ]
+  }
+}

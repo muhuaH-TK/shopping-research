@@ -1,0 +1,728 @@
+{
+  "fixture_id": "F3",
+  "run_id": "F3-B",
+  "input_hash": "e2e14d53c93c0403dc3aae14e4873ff10994b892ab5e900a33ab64434b8f1791",
+  "skill_hash": "e5cc1f9a5a61b93c025ff8d8109cd3747031695061e89de762146820cd4d7662",
+  "execution": {
+    "date": "2026-10-30",
+    "timezone": "Asia/Hong_Kong",
+    "context": "新独立评分上下文；仅使用F3固定原始材料、共享口径卡及任务允许的技能、规则与schema，未读取其他题、结果或oracle。",
+    "configuration": "继承默认配置，无显式模型覆盖；精确后端、采样参数未知（未暴露）。",
+    "observed_scope": "仅本题固定虚构材料与共享口径下的事实归属、评分、门槛及算式；未联网，不称客户端触发或现实商品已验证。题设证据日期2026-10-28，执行日期不刷新资料。",
+    "calibration_hash": "6780976f726b7dc1978f870d36dfff479195a901841bffd6cdc3c48f2bd87ab8",
+    "hash_verification": "input_hash与calibration_hash已按原文件SHA-256核对；skill_hash采用任务载明、由协调者核对的整个运行目录manifest哈希，不是SKILL.md单文件哈希。",
+    "review": "同代理按原始记录、共享口径、去重、状态与算式反向复核；未声称另代理独立复核。"
+  },
+  "anchors": {
+    "market": "虚构测试市场M；币种测试元；仅题设T条件，不是现实标准。",
+    "core_requirement": "指定桌面与人手条件下完整10个目标资料册均顺畅取放，核心承托与操作；预算含必要费用100。不以局部得分放宽完整目标。",
+    "weights": {
+      "quality": 35,
+      "fit": 20,
+      "value": 15,
+      "long_term_cost": 10,
+      "after_sales": 10,
+      "rd_marketing": 5,
+      "labor": 5
+    },
+    "calculation": "单项贡献=原权重×分项分/10；未评不补分，部分分保留可评原权重分母，不归一化。0/5/10只作表现锚点，非候选实际扣前分。",
+    "quality": {
+      "0": "0%",
+      "5": "50%",
+      "10": "100%",
+      "scope": "同工况10000次后全部功能保留率",
+      "formula": "得分=保留率百分数/10；缺此核心数据整维N/A。"
+    },
+    "fit": {
+      "0": "0/10",
+      "5": "5/10",
+      "10": "10/10",
+      "scope": "指定条件下10个目标中顺畅放入取出的个数",
+      "formula": "得分=顺畅个数；局部得分不等于完整满足。"
+    },
+    "value": {
+      "0": "达到可比上沿两倍且无相应收益，严重不值",
+      "5": "落在已给同层次可比报价区间，正常价值",
+      "10": "相同条件下显著低于可比低端的明确价格优势",
+      "scope": "当期同容量、同交易层次的单位顺畅位置公开成本",
+      "unknown": "仅历史价且缺当期必要交易事实时N/A。"
+    },
+    "long_term_cost": {
+      "0": "平均额外支出达到初购价且无法合理避免",
+      "5": "平均约初购价25%，负担实质但可管理",
+      "9": "均值≤初购5%、发生率≤20%、单次≤初购25%、无持续支出",
+      "10": "零额外支出且同口径比较支持突出低负担",
+      "scope": "指定两年除初购外实际额外支出",
+      "intermediate": "5%—25%区间按负担由8降至5；本题不需中段插值。"
+    },
+    "after_sales": {
+      "0": "已证服务无可行救济",
+      "5": "所给基本条款",
+      "8": "基本条款、合条件申请7天内完成及公开备件，但一年保修未覆盖两年",
+      "10": "完整覆盖持有期且有明显更优实际服务收益",
+      "scope": "7日未使用退货、12个月保修、实际履约与公开备件；两年持有范围"
+    },
+    "rd_marketing": {
+      "scope": "可归属研发成果与宣传兑现",
+      "rule": "无材料保持N/A，不按披露数量、品牌或未知默认分评价。"
+    },
+    "labor": {
+      "scope": "可归属实际用工",
+      "rule": "无材料保持N/A，不以未发现争议或福利会计总额代替。"
+    },
+    "safety": "F3-COMMON-1覆盖四款同版全部相关T-稳定、T-边缘及T-接触材料，均通过；不奖励质量分，不据此推定耐久或适配。",
+    "deduplication": "标准耐久失败主要归质量；顺畅取放不足主要归适配；丁已核实际维修费用集中归成本、服务恢复归售后，不补造标准工况质量结果。缺证不立负面事件。"
+  },
+  "candidates": [
+    {
+      "candidate_id": "F3-A",
+      "version": "盒甲2026",
+      "dimensions": {
+        "quality": {
+          "score": 8,
+          "weight": 35,
+          "evidence_ids": [
+            "F3-A-1"
+          ],
+          "reason": "10000次后80/100保持全部功能，保留率80%，按线性锚点得8。",
+          "evidence_state": "同版独立完整测试"
+        },
+        "fit": {
+          "score": 7,
+          "weight": 20,
+          "evidence_ids": [
+            "F3-A-1"
+          ],
+          "reason": "指定条件下7/10个目标资料册顺畅取放，按线性锚点得7。",
+          "evidence_state": "同版独立完整测试"
+        },
+        "value": {
+          "score": null,
+          "weight": 15,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "仅有2025年参考价，缺当期报价及必要交易条件，不能评价当期整体价值。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "long_term_cost": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有可归属的持有支出资料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "after_sales": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "未取得当期服务条件及执行资料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "rd_marketing": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有研发成果或宣传兑现材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "labor": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有可归属的实际用工材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        }
+      },
+      "safety": [
+        {
+          "item": "T-稳定",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过全部相关稳定安全条件；不据此评价耐久。"
+        },
+        {
+          "item": "T-边缘",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关边缘安全条件。"
+        },
+        {
+          "item": "T-接触材料",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关接触材料安全条件；不外推现实标准。"
+        }
+      ],
+      "purchase_status": "不符合本次购买条件",
+      "status_reason": "F3-A-1证实仅7/10顺畅取放，未满足完整10个的核心目标；F3-COMMON-2另显示预算内当期可购性待核。安全通过不能抵消已知适配不足。",
+      "hard_conditions": {
+        "full_target": "不满足：7/10顺畅取放",
+        "budget": "待核：无当期报价及必要费用"
+      },
+      "negative_events": [
+        {
+          "event_id": "F3-A-Q",
+          "evidence_ids": [
+            "F3-A-1"
+          ],
+          "primary_dimension": "quality",
+          "before": null,
+          "after": 8,
+          "reason": "100件中20件在10000次后未保持全部功能；8分由80%线性取得。相对10分满表现锚点差2分、加权差7分，非实际曾得10分再扣。",
+          "other_consequences": []
+        },
+        {
+          "event_id": "F3-A-F",
+          "evidence_ids": [
+            "F3-A-1"
+          ],
+          "primary_dimension": "fit",
+          "before": null,
+          "after": 7,
+          "reason": "3个目标未达顺畅取放，得7分；相对10分锚点差3分、加权差6分。",
+          "other_consequences": [
+            "完整10个目标未满足，判不符合本次购买条件；不再另扣安全或质量。"
+          ]
+        }
+      ],
+      "aggregate": {
+        "kind": "partial",
+        "numerator": 42,
+        "denominator": 55,
+        "included_dimensions": [
+          "quality",
+          "fit"
+        ],
+        "formula": "35×8/10 + 20×7/10 = 28 + 14 = 42；分母35+20=55。"
+      },
+      "recommendation": {
+        "score": null,
+        "nature": "不另造主观推荐分；实证部分分42/55",
+        "reason": "不能满足完整目标，部分分仅用于已核项目比较。",
+        "change_conditions": [
+          "若用户明确改为最多7个目标，再重新审查当期报价、必要费用与服务；本轮不自行放宽需求。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "F3-B",
+      "version": "盒乙2026",
+      "dimensions": {
+        "quality": {
+          "score": 7,
+          "weight": 35,
+          "evidence_ids": [
+            "F3-B-1"
+          ],
+          "reason": "10000次后70/100保持全部功能，保留率70%，按线性锚点得7。",
+          "evidence_state": "同版独立完整测试"
+        },
+        "fit": {
+          "score": 9,
+          "weight": 20,
+          "evidence_ids": [
+            "F3-B-1"
+          ],
+          "reason": "指定条件下9/10个目标资料册顺畅取放，按线性锚点得9。",
+          "evidence_state": "同版独立完整测试"
+        },
+        "value": {
+          "score": null,
+          "weight": 15,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "仅有2025年参考价，缺当期报价及必要交易条件，不能评价当期整体价值。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "long_term_cost": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有可归属的持有支出资料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "after_sales": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "未取得当期服务条件及执行资料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "rd_marketing": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有研发成果或宣传兑现材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "labor": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有可归属的实际用工材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        }
+      },
+      "safety": [
+        {
+          "item": "T-稳定",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过全部相关稳定安全条件；不据此评价耐久。"
+        },
+        {
+          "item": "T-边缘",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关边缘安全条件。"
+        },
+        {
+          "item": "T-接触材料",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关接触材料安全条件；不外推现实标准。"
+        }
+      ],
+      "purchase_status": "不符合本次购买条件",
+      "status_reason": "F3-B-1证实仅9/10顺畅取放，仍未满足完整10个的核心目标；F3-COMMON-2另有当期交易缺口。较高部分分不升级购买状态。",
+      "hard_conditions": {
+        "full_target": "不满足：9/10顺畅取放",
+        "budget": "待核：无当期报价及必要费用"
+      },
+      "negative_events": [
+        {
+          "event_id": "F3-B-Q",
+          "evidence_ids": [
+            "F3-B-1"
+          ],
+          "primary_dimension": "quality",
+          "before": null,
+          "after": 7,
+          "reason": "100件中30件在10000次后未保持全部功能；7分由70%线性取得。相对10分锚点差3分、加权差10.5分，非实际扣前分。",
+          "other_consequences": []
+        },
+        {
+          "event_id": "F3-B-F",
+          "evidence_ids": [
+            "F3-B-1"
+          ],
+          "primary_dimension": "fit",
+          "before": null,
+          "after": 9,
+          "reason": "1个目标未达顺畅取放，得9分；相对10分锚点差1分、加权差2分。",
+          "other_consequences": [
+            "完整目标未满足，判不符合本次购买条件；不再另扣其他维度。"
+          ]
+        }
+      ],
+      "aggregate": {
+        "kind": "partial",
+        "numerator": 42.5,
+        "denominator": 55,
+        "included_dimensions": [
+          "quality",
+          "fit"
+        ],
+        "formula": "35×7/10 + 20×9/10 = 24.5 + 18 = 42.5；分母35+20=55。"
+      },
+      "recommendation": {
+        "score": null,
+        "nature": "不另造主观推荐分；实证部分分42.5/55",
+        "reason": "只在质量与适配的共同集合中略高于甲，不能满足完整目标。",
+        "change_conditions": [
+          "若用户明确接受9个目标，再重新审查当期报价、必要费用与服务；本轮不自行放宽需求。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "F3-C",
+      "version": "盒丙2026",
+      "dimensions": {
+        "quality": {
+          "score": null,
+          "weight": 35,
+          "evidence_ids": [
+            "F3-C-1",
+            "F3-COMMON-1"
+          ],
+          "reason": "缺同工况10000次功能保留率，核心质量依据不足；安全已通过，但不能替代耐久数据。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "fit": {
+          "score": 9,
+          "weight": 20,
+          "evidence_ids": [
+            "F3-C-1"
+          ],
+          "reason": "指定条件下9/10个目标资料册顺畅取放，按线性锚点得9。",
+          "evidence_state": "同版独立尺寸与操作实测"
+        },
+        "value": {
+          "score": null,
+          "weight": 15,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "仅有2025年参考价，缺当期报价及必要交易条件，不能评价当期整体价值。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "long_term_cost": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有可归属的持有支出资料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "after_sales": {
+          "score": null,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "未取得当期服务条件及执行资料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "rd_marketing": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有研发成果或宣传兑现材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "labor": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-COMMON-2"
+          ],
+          "reason": "没有可归属的实际用工材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        }
+      },
+      "safety": [
+        {
+          "item": "T-稳定",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过全部相关稳定安全条件；不据此评价耐久。"
+        },
+        {
+          "item": "T-边缘",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关边缘安全条件。"
+        },
+        {
+          "item": "T-接触材料",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关接触材料安全条件；不外推现实标准。"
+        }
+      ],
+      "purchase_status": "不符合本次购买条件",
+      "status_reason": "F3-C-1已证实仅9/10顺畅取放，未满足完整核心目标；耐久及F3-COMMON-2当期交易资料另待核，不把已知适配不足改称待核。",
+      "hard_conditions": {
+        "full_target": "不满足：9/10顺畅取放",
+        "budget": "待核：无当期报价及必要费用"
+      },
+      "negative_events": [
+        {
+          "event_id": "F3-C-F",
+          "evidence_ids": [
+            "F3-C-1"
+          ],
+          "primary_dimension": "fit",
+          "before": null,
+          "after": 9,
+          "reason": "1个目标未达顺畅取放，得9分；相对10分锚点差1分、加权差2分，非实际曾得10分。",
+          "other_consequences": [
+            "完整目标未满足，判不符合本次购买条件；耐久缺证本身不作扣分事件。"
+          ]
+        }
+      ],
+      "aggregate": {
+        "kind": "partial",
+        "numerator": 18,
+        "denominator": 20,
+        "included_dimensions": [
+          "fit"
+        ],
+        "formula": "20×9/10 = 18；分母20。"
+      },
+      "recommendation": {
+        "score": null,
+        "nature": "不另造主观推荐分；实证部分分18/20",
+        "reason": "仅适配可评，不能换算为90/100后参与综合排序。",
+        "change_conditions": [
+          "完整目标或实际产品条件发生有据变化后重审；补耐久及当期交易材料不能单独消除已知适配不足。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "F3-D",
+      "version": "盒丁2026",
+      "dimensions": {
+        "quality": {
+          "score": null,
+          "weight": 35,
+          "evidence_ids": [
+            "F3-D-1",
+            "F3-D-3",
+            "F3-COMMON-1"
+          ],
+          "reason": "缺同工况10000次功能保留率；两年维修成本记录及安全结果不能补造该质量指标。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "fit": {
+          "score": 8,
+          "weight": 20,
+          "evidence_ids": [
+            "F3-D-1"
+          ],
+          "reason": "指定条件下8/10个目标资料册顺畅取放，按线性锚点得8。",
+          "evidence_state": "同版独立尺寸与操作实测"
+        },
+        "value": {
+          "score": 5,
+          "weight": 15,
+          "evidence_ids": [
+            "F3-D-2"
+          ],
+          "reason": "公开价40、配送0，8个顺畅位置，40/8=5/位置，落在同容量同交易层次4.5—6区间，按正常价值锚点得5。",
+          "evidence_state": "同版当期公开交易与功能单位成本资料；非结算复现"
+        },
+        "long_term_cost": {
+          "score": 9,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-D-3",
+            "F3-D-2"
+          ],
+          "reason": "两年平均额外支出20%×8=1.6，占初购40的4%；发生率20%、单次20%、无持续支出，满足9分低负担锚点，非零支出10分。",
+          "evidence_state": "可归属同版100件两年实际持有记录；均值不保证个人未来"
+        },
+        "after_sales": {
+          "score": 8,
+          "weight": 10,
+          "evidence_ids": [
+            "F3-D-4"
+          ],
+          "reason": "基本退货与12个月保修，加10/10合条件申请7天内完成及公开备件，达到8分；一年保修未覆盖两年持有。",
+          "evidence_state": "同版条款及实际履约记录"
+        },
+        "rd_marketing": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-D-4"
+          ],
+          "reason": "没有研发成果或宣传兑现材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        },
+        "labor": {
+          "score": null,
+          "weight": 5,
+          "evidence_ids": [
+            "F3-D-4"
+          ],
+          "reason": "没有实际用工材料。",
+          "evidence_state": "资料不足，N/A；不填默认分"
+        }
+      },
+      "safety": [
+        {
+          "item": "T-稳定",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过全部相关稳定安全条件；不据此评价耐久。"
+        },
+        {
+          "item": "T-边缘",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关边缘安全条件。"
+        },
+        {
+          "item": "T-接触材料",
+          "state": "通过",
+          "evidence_ids": [
+            "F3-COMMON-1"
+          ],
+          "reason": "本题同版已通过相关接触材料安全条件；不外推现实标准。"
+        }
+      ],
+      "purchase_status": "不符合本次购买条件",
+      "status_reason": "F3-D-1证实仅8/10顺畅取放，未满足完整10个的核心目标。F3-D-2、F3-D-4虽已支持40+0=40≤100及现货配送服务判断，也不能抵消该不足。",
+      "hard_conditions": {
+        "full_target": "不满足：8/10顺畅取放",
+        "budget": "通过：指定卖家公开价40+配送0=40测试元≤100",
+        "transaction_layer": "题设2026-10-28公开价、现货、全测试市场配送及售后；未声称现实或2026-10-30新核价"
+      },
+      "negative_events": [
+        {
+          "event_id": "F3-D-F",
+          "evidence_ids": [
+            "F3-D-1"
+          ],
+          "primary_dimension": "fit",
+          "before": null,
+          "after": 8,
+          "reason": "2个目标未达顺畅取放，得8分；相对10分锚点差2分、加权差4分，非实际扣前分。",
+          "other_consequences": [
+            "完整目标未满足，判不符合本次购买条件。"
+          ]
+        },
+        {
+          "event_id": "F3-D-COST",
+          "evidence_ids": [
+            "F3-D-3"
+          ],
+          "primary_dimension": "long_term_cost",
+          "before": null,
+          "after": 9,
+          "reason": "20%样本各有8元可维修支出，平均1.6元，故属低负担9分而非零支出；不编实际扣前分。",
+          "other_consequences": [
+            "维修发生率集中归成本，不换名重复扣质量；不据样本保证个人未来支出。"
+          ]
+        },
+        {
+          "event_id": "F3-D-WARRANTY",
+          "evidence_ids": [
+            "F3-D-4"
+          ],
+          "primary_dimension": "after_sales",
+          "before": null,
+          "after": 8,
+          "reason": "12个月保修短于两年持有，结合实际有效补救落在8分锚点；未发生服务拒绝，不能虚构扣前分或额外罚分。",
+          "other_consequences": [
+            "公开备件支持保外修复路径，费用按成本记录处理，不重复扣成本。"
+          ]
+        }
+      ],
+      "aggregate": {
+        "kind": "partial",
+        "numerator": 40.5,
+        "denominator": 55,
+        "included_dimensions": [
+          "fit",
+          "value",
+          "long_term_cost",
+          "after_sales"
+        ],
+        "formula": "20×8/10 + 15×5/10 + 10×9/10 + 10×8/10 = 16 + 7.5 + 9 + 8 = 40.5；分母20+15+10+10=55。"
+      },
+      "recommendation": {
+        "score": null,
+        "nature": "不另造主观推荐分；实证部分分40.5/55",
+        "reason": "部分分项目不同于甲乙，不能因分母相同而比较综合高低；完整目标仍未满足。",
+        "change_conditions": [
+          "若用户明确接受8个目标，可按已核公开交易条件重审；仍保留耐久未知，本轮不自行放宽需求。"
+        ]
+      }
+    }
+  ],
+  "comparison": {
+    "order_type": "no_overall_order",
+    "candidate_order": [],
+    "reason": "不作四款综合排序。甲乙相同质量+适配集合可作42.5/55>42/55的局部比较；丙仅18/20，丁40.5/55虽与甲乙同分母但项目不同，均不能混排。四款均不满足完整10个目标，局部顺序不是购买推荐。",
+    "comparable_subsets": [
+      {
+        "scope": [
+          "quality",
+          "fit"
+        ],
+        "weights": {
+          "quality": 35,
+          "fit": 20
+        },
+        "order": [
+          "F3-B",
+          "F3-A"
+        ],
+        "scores": {
+          "F3-B": "42.5/55",
+          "F3-A": "42/55"
+        },
+        "reason": "乙适配加权多4，质量加权少3.5，净多0.5；仅共同两项。"
+      },
+      {
+        "scope": [
+          "fit"
+        ],
+        "weights": {
+          "fit": 20
+        },
+        "order_groups": [
+          [
+            "F3-B",
+            "F3-C"
+          ],
+          [
+            "F3-D"
+          ],
+          [
+            "F3-A"
+          ]
+        ],
+        "scores": {
+          "F3-B": "18/20",
+          "F3-C": "18/20",
+          "F3-D": "16/20",
+          "F3-A": "14/20"
+        },
+        "reason": "仅比较四款同锚点适配贡献，不推定其他未知表现。"
+      }
+    ],
+    "unresolved": [
+      "四款均无完整10个顺畅取放的满足证据，且已核结果明确不足；保持原需求时无可推荐购买项。",
+      "甲乙丙缺当期报价、必要费用、库存与服务条件；三款长期成本、研发及劳工资料缺失。",
+      "丙丁缺指定10000次同工况质量核心数据；丁成本和售后记录不得代填该项，丁研发和劳工仍N/A。",
+      "本轮为事后共享尺度下的固定材料复测，不能据此声称新材料泛化、自由评分稳定或现实商品验证。"
+    ]
+  }
+}
+

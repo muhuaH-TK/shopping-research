@@ -1,0 +1,12 @@
+{
+  "round": "r3",
+  "fixture_ids": [
+    "F2"
+  ],
+  "observed_runs": 3,
+  "expected_runs": 3,
+  "machine_checks": "passed",
+  "problems": [],
+  "semantic_review": "separate_required",
+  "scope": "fictional materials only; no real product or client-invocation claim"
+}

@@ -1,0 +1,54 @@
+{
+  "status": "failed",
+  "observed_runs": 15,
+  "issues": [
+    {
+      "id": "R2-SEM-001",
+      "severity": "must_fix",
+      "fixture_id": "F2",
+      "run_id": "F2-A",
+      "candidate": "F2-A",
+      "field": "candidates[F2-A].negative_events[E-厚度].reason",
+      "source_ids": ["F2-A-1"],
+      "observed": "标示相对实测低25%",
+      "source_fact": "标签0.8mm；10件实际均值0.6mm，复测一致。",
+      "reason": "厚度反证的比较方向写反。实测比标示低25%，不是标示比实测低25%。同一输出quality理由的0.8/0.6正确，形成局部语义矛盾。",
+      "impact": "评分6、8→6及加权减少7正确；不构成数字漂移，但关键反证描述不能仅因计算和机器检查通过而豁免。",
+      "recommended_action": "保留本次失败及原始运行记录；后续仅重测受影响组，不回填或改写r2结果。本审查没有修改任何原输出。"
+    }
+  ],
+  "scope": {
+    "review_type": "独立语义审查，不是新评分",
+    "included": [
+      "冻结r2评分、购买状态、安全与证据规则",
+      "五组原始虚构fixtures及对应共享calibration卡",
+      "stage/tests/oracle.json",
+      "r2十五份实际输出及机器检查"
+    ],
+    "excluded": ["internal真实案例", "私人profile细节", "联网", "安装", "发布", "原评分或原事实/阈值修改"],
+    "method": "逐组人工核对事实、反证、范围、锚点、扣分理由、去重、来源归属、安全和条件顺序，再独立复算与核对实际字节哈希；不以机器通过代替语义审查。",
+    "calibration_limit": "看到r1分歧后的共享尺度事后标定复测；卡内数值是本轮约定，不是客观真值，不能证明自由评分稳定或新材料泛化。",
+    "numeric_result": "可评分项跨次最大漂移0/10，完整七项总分最大漂移0/100，无N/A与数值互换；未改变≤1/10及≤5/100既定容差。",
+    "categorical_result": "关键安全、购买状态、可评范围和去重一致；F2-A有一处关键反证方向的局部文本矛盾。",
+    "source_result": "引用的记录ID均存在且无跨候选错归属；派生比率结合本款交易来源核对。",
+    "machine_result": "最新机器检查15/15通过；本语义问题独立保留。",
+    "boundary": "只验证所列固定虚构材料和对应输出快照；不作现实商品、客户端触发、唯一主观分或未观察行为的验证声明。"
+  },
+  "output_hashes": {
+    "F1-A.json": "df386f0d0fe7c8af643c80c75f07a4195afcee8ee6431fcf17d6295955922d5b",
+    "F1-B.json": "4a1fa3245d1842905fcb7ba34aaf3f0a1424ddde3586a9e170bbc61667627086",
+    "F1-C.json": "dd15af65fc346436f74b6148da5dc3a68355a1e3695f3256d6bb4f2c9f2e8566",
+    "F2-A.json": "2802a69e9dae75b2783d3a4233e8734c03f8bcc201fa9d2a6bedfcdf31a51af6",
+    "F2-B.json": "2857b78c5e85e0d3a882b5982b3ed3cb10e260b50149ea9b11858c9f520f9067",
+    "F2-C.json": "7011ab2767385de7aee98bf50d4cfbd5759ae10e2638b092ee1251f61374de03",
+    "F3-A.json": "51e35e27da1a82c0e7005ea87060059ad8a7aa86be669c139a54514a482cc2bf",
+    "F3-B.json": "5de2dc277dff4c0986c305126577dac13867d701bdd8411edd180bb95959fcf4",
+    "F3-C.json": "63317e5560a5d8b781ba1f7e98922290cbd6870abdd6c549bf5e7a53d3a02478",
+    "F4-A.json": "02b48c1de62621ad5913aee0d56a9b07fe3cd261b33fa269eac66fa76232ea69",
+    "F4-B.json": "a9c62d52cae0792163ad6d150f2d6315743865a11b9c6790a1cc652d18dfcb6b",
+    "F4-C.json": "21c2d68da53619088b0572f07a98c03f6be04611f7b542796ed616c7247e9eb2",
+    "F5-A.json": "84bf000f5e58cb66a40dd76e6a0ecc959e89daead8842f74e465849d45837fd4",
+    "F5-B.json": "e7f89031a6de06b392948b54be967987d125adab9bfbc39bde858aca7638b34b",
+    "F5-C.json": "e4f0bf83d5aed6e0510d0eee93cea3bfd3c9a4a1fdd667420b332356f3b5b962"
+  }
+}

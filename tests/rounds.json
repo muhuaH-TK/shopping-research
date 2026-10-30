@@ -1,0 +1,68 @@
+{
+  "r1": {
+    "runtime_hash": "8f2bedc424d626d7e2c7ea16e27410b4d41802895933afb0ed64de66f26a7fbc",
+    "source_version": "1.3.0 r1",
+    "raw_input_hashes": {
+      "F1.json": "91270795264f6bc26077ad4cd6198bb802a9908b13650c57c097de3b71b288e4",
+      "F2.json": "d9b4632b54bbd83589ee3a80b73a95ddcb264d3c425dbacb82a67ca94b435eb8",
+      "F3.json": "e2e14d53c93c0403dc3aae14e4873ff10994b892ab5e900a33ab64434b8f1791",
+      "F4.json": "ba47b1fa955ae16b4994a1561a09ae5d374b99e453ac0405866cc3a42dcfa298",
+      "F5.json": "c21964765c40937cf9adadb5655568abe589acc7dc457d33a8612ff27bcfa436"
+    },
+    "rule_snapshot": "rule-snapshots/r1/manifest.json",
+    "configuration": "Inherited default configuration, no explicit overrides; actual backend and sampling parameters not exposed."
+  },
+  "r2": {
+    "runtime_hash": "e5cc1f9a5a61b93c025ff8d8109cd3747031695061e89de762146820cd4d7662",
+    "source_version": "1.3.0 r2",
+    "raw_input_hashes": {
+      "F1.json": "91270795264f6bc26077ad4cd6198bb802a9908b13650c57c097de3b71b288e4",
+      "F2.json": "d9b4632b54bbd83589ee3a80b73a95ddcb264d3c425dbacb82a67ca94b435eb8",
+      "F3.json": "e2e14d53c93c0403dc3aae14e4873ff10994b892ab5e900a33ab64434b8f1791",
+      "F4.json": "ba47b1fa955ae16b4994a1561a09ae5d374b99e453ac0405866cc3a42dcfa298",
+      "F5.json": "c21964765c40937cf9adadb5655568abe589acc7dc457d33a8612ff27bcfa436"
+    },
+    "calibration_hashes": {
+      "F1.json": "1f87b8501fa2770b7068ccbaa2e66f65561bdaba3237597027e3372dc1836e01",
+      "F2.json": "ed172ab85e0d5c4ed4e3a12a21c091199069b0a21e530059b6773f2a67b8841c",
+      "F3.json": "6780976f726b7dc1978f870d36dfff479195a901841bffd6cdc3c48f2bd87ab8",
+      "F4.json": "06927b3cf22f96a752f4b26405ebbfb0edc8f9adcade4270510e530a41c890cc",
+      "F5.json": "90011035b9d5844880c50d1b54ee46af2195c1a4cd40b97d895f590f879fdc77",
+      "README.md": "b82052231bef10531aa0c775a91f714d9244def109c77d5b5f1fa1aea73d26cc"
+    },
+    "posthoc_calibration": true,
+    "rule_snapshot": "rule-snapshots/r2/manifest.json",
+    "configuration": "Inherited default configuration without explicit overrides; actual backend/sampling unknown."
+  },
+  "r3": {
+    "runtime_hash": "e5cc1f9a5a61b93c025ff8d8109cd3747031695061e89de762146820cd4d7662",
+    "source_version": "1.3.0 r2 runtime, targeted second repair",
+    "raw_input_hashes": {
+      "F1.json": "91270795264f6bc26077ad4cd6198bb802a9908b13650c57c097de3b71b288e4",
+      "F2.json": "d9b4632b54bbd83589ee3a80b73a95ddcb264d3c425dbacb82a67ca94b435eb8",
+      "F3.json": "e2e14d53c93c0403dc3aae14e4873ff10994b892ab5e900a33ab64434b8f1791",
+      "F4.json": "ba47b1fa955ae16b4994a1561a09ae5d374b99e453ac0405866cc3a42dcfa298",
+      "F5.json": "c21964765c40937cf9adadb5655568abe589acc7dc457d33a8612ff27bcfa436"
+    },
+    "calibration_hashes": {
+      "F1.json": "1f87b8501fa2770b7068ccbaa2e66f65561bdaba3237597027e3372dc1836e01",
+      "F2.json": "ed172ab85e0d5c4ed4e3a12a21c091199069b0a21e530059b6773f2a67b8841c",
+      "F3.json": "6780976f726b7dc1978f870d36dfff479195a901841bffd6cdc3c48f2bd87ab8",
+      "F4.json": "06927b3cf22f96a752f4b26405ebbfb0edc8f9adcade4270510e530a41c890cc",
+      "F5.json": "90011035b9d5844880c50d1b54ee46af2195c1a4cd40b97d895f590f879fdc77",
+      "README.md": "b82052231bef10531aa0c775a91f714d9244def109c77d5b5f1fa1aea73d26cc"
+    },
+    "posthoc_calibration": true,
+    "rule_snapshot": "rule-snapshots/r2/manifest.json",
+    "configuration": "Inherited default configuration without explicit overrides; actual backend/sampling unknown.",
+    "fixture_ids": [
+      "F2"
+    ],
+    "execution_change": "Final readback explicitly checks source numbers, comparison direction and percentage denominator; no earlier output or error supplied to evaluators.",
+    "task_protocol_hashes": {
+      "F2-A.md": "77a15cd9b7fbc8c072c188ca5fa90828b3c0b6979c2906c1dbb3b9e0ac398c8b",
+      "F2-B.md": "65fc567ea0a396276549f18f944fa7ac9abe1f895725052554d1bfa6cc0fb690",
+      "F2-C.md": "0294e9f75193ff243ff757469c53fb35ff212a47cc140e43bcda483f614f2cd0"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "runtime_hash": "e5cc1f9a5a61b93c025ff8d8109cd3747031695061e89de762146820cd4d7662",
+  "files": {
+    "agents/openai.yaml": {
+      "archive": "agents/openai.yaml.txt",
+      "sha256": "835308ca9410dd9b30ee2176c202c66edb3ad7b09b6ceb6ad1031b5850341a19"
+    },
+    "LICENSE": {
+      "archive": "LICENSE.txt",
+      "sha256": "81ed6e139c41cea2f000e093e184b4c810c235e63e5130c7c32aa0792b0b9934"
+    },
+    "references/adapted-methods.md": {
+      "archive": "references/adapted-methods.md.txt",
+      "sha256": "271e55dcbf2ebdebb6fe76ec1fde3a65cf2e5629e8a0ffe046c4c9255e8c731c"
+    },
+    "references/category-cards.md": {
+      "archive": "references/category-cards.md.txt",
+      "sha256": "881c0cfb5c8eaabd8f4b8bc27d62607d58dbdda5c90a1caec34708c71645de58"
+    },
+    "references/delivery-format.md": {
+      "archive": "references/delivery-format.md.txt",
+      "sha256": "fa13c2f16595f54833bed75d70893f4f84f74ce7162c39d51931d7828fdb2282"
+    },
+    "references/document-lifecycle.md": {
+      "archive": "references/document-lifecycle.md.txt",
+      "sha256": "6ecb01d18fc721264c541b9dd82584c78a05ca3f006e03b633e892639abc8329"
+    },
+    "references/evidence-rules.md": {
+      "archive": "references/evidence-rules.md.txt",
+      "sha256": "0eebf7f3494d79b4917d8da5b06772c62648599e269daca49d690dc99978cf1a"
+    },
+    "references/farm-support-products.md": {
+      "archive": "references/farm-support-products.md.txt",
+      "sha256": "d8967b477198233f0d2d76b29ec2d3ea264726186b0669af4691f8c3636a0ada"
+    },
+    "references/food-quality-review.md": {
+      "archive": "references/food-quality-review.md.txt",
+      "sha256": "80172b8c03c5bfd23de829e4511f005dc5a60508b3a8ebef3d6a743baa8f20cf"
+    },
+    "references/health-safety-review.md": {
+      "archive": "references/health-safety-review.md.txt",
+      "sha256": "a4c06af77863a89f2065f0b21db7652d7a65576a05256323ebe7f6f5ee0c8c63"
+    },
+    "references/purchase-decision.md": {
+      "archive": "references/purchase-decision.md.txt",
+      "sha256": "7e3d1f142bb15bada102ec6a2d341ee51f62754ae7bd93b214a5f9e82aab791a"
+    },
+    "references/research-workbook.md": {
+      "archive": "references/research-workbook.md.txt",
+      "sha256": "7ed647f0b226a0e2b9eb84e5eca02cbd734dfd34d9279334d52fa30a7744c085"
+    },
+    "references/review-and-archive.md": {
+      "archive": "references/review-and-archive.md.txt",
+      "sha256": "b268c4693fc31e5c31d4f7408ec2826640477ca57b458cfbff08823e3c01141e"
+    },
+    "references/scoring.md": {
+      "archive": "references/scoring.md.txt",
+      "sha256": "508cc1ece5a187ffecfb2b76116be6c74a99e18ffab46deb3b68444841a396e6"
+    },
+    "SKILL.md": {
+      "archive": "SKILL.md.txt",
+      "sha256": "70ca8296dd7d265e15aa5a23572290ab102786b27799078bbfffe439e3ccd365"
+    },
+    "VERSION": {
+      "archive": "VERSION.txt",
+      "sha256": "3c85c66d06c31df0c6511ad18b7e8576fcf8e76a011c5c28bbd66c57f3ed851e"
+    }
+  },
+  "version": "1.3.0",
+  "revision": "r2"
+}

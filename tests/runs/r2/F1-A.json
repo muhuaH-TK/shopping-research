@@ -1,0 +1,85 @@
+{
+  "fixture_id": "F1",
+  "run_id": "F1-A",
+  "input_hash": "91270795264f6bc26077ad4cd6198bb802a9908b13650c57c097de3b71b288e4",
+  "skill_hash": "e5cc1f9a5a61b93c025ff8d8109cd3747031695061e89de762146820cd4d7662",
+  "execution": {
+    "date": "2026-10-30",
+    "context": "新独立子代理上下文；仅使用本题允许的固定材料与共享口径，未读取其他题、历史评分或oracle。",
+    "configuration": "继承默认配置，无显式模型覆盖；精确后端与采样配置未知。",
+    "observed_scope": "仅本题虚构记录、冻结技能必要规则与共享口径；未联网、未作现实商品核验或客户端技能触发验证。",
+    "calibration_hash": "1f87b8501fa2770b7068ccbaa2e66f65561bdaba3237597027e3372dc1836e01"
+  },
+  "anchors": {
+    "source": "F1共享评分口径卡r2-calibration-1；事后尺度标定，仅用于固定材料复测。",
+    "weights": {"quality": 35, "fit": 20, "value": 15, "long_term_cost": 10, "after_sales": 10, "rd_marketing": 5, "labor": 5},
+    "need": "A4桌面文件架，宽不超过30cm，公开必要支出不超过100测试元；日常3kg稳定与循环取放耐久优先，超过3kg能力不是硬条件。",
+    "quality": {
+      "scope": "3kg循环功能、顺畅及负载标示与同版升载表现一致性；安全另列。",
+      "0": "3kg严重失效，基本取放不能成立。",
+      "5": "基本可用，但较早、持续或明显卡涩/变形形成重要取舍。",
+      "8": "至少5000次保持功能且后段仍可取放，日常目标有充分耐久依据。",
+      "10": "较够用水平存在明确可比显著耐久优势且标示一致。",
+      "adjustments": "晚期少量卡涩但仍可取放减1；超日常负载的标示不符再减1，分别归质量且各计一次。只有参数和安全验收而无循环或长期耐久核心依据时整维N/A。"
+    },
+    "fit": {"scope": "仅A4装取及占宽，不重复耐久或真实性。", "0": "A4用途不能成立或超过限宽。", "5": "可用但空间/装取有明显负担。", "8": "A4与宽度明确满足，通常余量且无额外便利依据；允许厂商参数支持的适配推断。", "10": "有相对够用水平明确的额外操作或空间收益。"},
+    "value": {"scope": "同版公开价加已知必要费用相对预算及已核基础功能；非结算价或市场最低。", "0": "必要支出明显不匹配基本效用或不满足预算。", "5": "基本效用成立，预算占用90%至100%。", "7": "预算占用大于80%且小于90%。", "8": "预算占用60%至80%，含端点。", "9": "预算占用低于60%。", "10": "另有充分同功能同交易层次比较证明突出优势。", "adjustments": "同档小额价差保留金额，不另造整数分差；必要功能或费用不足以形成判断则N/A。"},
+    "long_term_cost": {"scope": "实际耗材、维修及持有期支出。", "na": "缺充分实际成本依据即N/A，不由购价或保修推定零成本。"},
+    "after_sales": {"scope": "仅公开退货与质量保修条款，执行、供件和维修支持未知。", "0": "无可用基本补救，或严重拒绝履行且无有效补救。", "5": "7日未使用退货及12个月质量保修基础组合。", "10": "实际执行及维修支持证明显著高于基础保障。"},
+    "rd_marketing": {"scope": "可归属成果及独立宣传兑现。", "na": "整体依据不足则N/A；负载标示事件不从质量转述重扣。"},
+    "labor": {"scope": "实际主体的工时、待遇及补救。", "na": "无材料则N/A，不以未检出争议给分。"},
+    "calculation": "各维weight*score/10；缺项保留已评原权重分母，不归一化。安全及购买状态单列；不同已评项目集合不直接混排。",
+    "recommendation": "本题不另造可选的暂定推荐分，以实证部分分和核心需求条件顺序表达判断。"
+  },
+  "candidates": [
+    {
+      "candidate_id": "F1-A",
+      "dimensions": {
+        "quality": {"score": 6, "weight": 35, "evidence_ids": ["F1-A-1"], "reason": "3kg下10件均完成5000次且后段仍可取放，基础8分；晚期2件卡涩及3.8kg变形与5kg标示差异各减1，得6分。", "evidence_state": "同版独立耐久及升载实证，限记录工况"},
+        "fit": {"score": 8, "weight": 20, "evidence_ids": ["F1-A-1"], "reason": "宽27cm且A4装取正常，满足30cm限宽与物理用途；未显示额外便利。", "evidence_state": "同版独立记录支持物理适配"},
+        "value": {"score": 8, "weight": 15, "evidence_ids": ["F1-A-2", "F1-A-1"], "reason": "公开价79加配送0为79测试元，占预算79%，基础功能成立，落60%至80%档；未经结算且不称最低价。", "evidence_state": "2026-10-28固定记录的同版公开报价及费用，非已复现结算价"},
+        "long_term_cost": {"score": null, "weight": 10, "evidence_ids": ["F1-COMMON-2"], "reason": "缺耗材、维修和持有期实际成本，不能由保修或购价推定。", "evidence_state": "N/A，核心成本依据不足"},
+        "after_sales": {"score": 5, "weight": 10, "evidence_ids": ["F1-A-2", "F1-COMMON-2"], "reason": "7日未使用退货与12个月保修符合基础条款锚点；执行、供件和维修支持未知。", "evidence_state": "仅公开承诺范围可评，执行未知"},
+        "rd_marketing": {"score": null, "weight": 5, "evidence_ids": ["F1-COMMON-2", "F1-A-1"], "reason": "整体成果与宣传兑现依据不足；负载标示差异已计质量，不重复扣分。", "evidence_state": "N/A，整体依据不足，已知事件归质量"},
+        "labor": {"score": null, "weight": 5, "evidence_ids": ["F1-COMMON-2"], "reason": "无足够实际用工资料，保持未知。", "evidence_state": "N/A，缺实际主体用工证据"}
+      },
+      "safety": [
+        {"item": "T-架体稳定", "state": "通过", "evidence_ids": ["F1-COMMON-1"], "reason": "同版独立验收已匹配型号、样品及签发者，3kg规定工况无倾覆；仅为题设虚构要求。"},
+        {"item": "T-边缘防护", "state": "通过", "evidence_ids": ["F1-COMMON-1"], "reason": "同版验收3kg工况无锐边暴露，题设已说明覆盖全部相关关键安全项目。"}
+      ],
+      "purchase_status": "可进入购买决策",
+      "status_reason": "A4、宽度、3kg日常稳定与循环耐久有足够依据，79测试元公开必要支出、现货、全市场配送及基础售后明确。晚期卡涩与超日常负载标示差异属于已知非门槛取舍，限定日常最大3kg且接受后段卡涩风险；仅在固定材料日期内成立。",
+      "negative_events": [
+        {"event_id": "F1-A-late-sticking", "evidence_ids": ["F1-A-1"], "primary_dimension": "quality", "before": 8, "after": 7, "reason": "5001至10000次间2/10件卡涩但仍可取放，按晚期少量非核心失效减1；加权影响为-3.5。", "other_consequences": ["日常使用可能增加取放阻力，条件建议披露；不另扣适配、口碑或长期成本。"]},
+        {"event_id": "F1-A-load-label-mismatch", "evidence_ids": ["F1-A-1"], "primary_dimension": "quality", "before": 7, "after": 6, "reason": "首次明显变形3.8kg与最大5kg标签不一致，按真实性取舍再减1，加权影响为-3.5；不能写成3kg失效。", "other_consequences": ["不依标签扩展到5kg用途，不重复扣研发营销；题设3kg安全通过保留。"]}
+      ],
+      "aggregate": {"kind": "partial", "numerator": 54, "denominator": 80, "included_dimensions": ["quality", "fit", "value", "after_sales"], "formula": "35*6/10 + 20*8/10 + 15*8/10 + 10*5/10 = 21+16+12+5 = 54；分母35+20+15+10=80"}
+    },
+    {
+      "candidate_id": "F1-B",
+      "dimensions": {
+        "quality": {"score": null, "weight": 35, "evidence_ids": ["F1-B-1", "F1-COMMON-1"], "reason": "仅有参数及3kg安全验收，完全缺循环或长期耐久核心依据；保留安全通过，不由未见问题推定质量。", "evidence_state": "N/A，日常循环耐久核心依据不足"},
+        "fit": {"score": 8, "weight": 20, "evidence_ids": ["F1-B-1"], "reason": "厂商参数宽27cm且可放A4，支持限范围物理适配推断；无额外操作或空间收益依据。", "evidence_state": "厂商参数支持的适配推断，非独立耐久证据"},
+        "value": {"score": 8, "weight": 15, "evidence_ids": ["F1-B-2", "F1-B-1", "F1-COMMON-1"], "reason": "公开75加配送0为75测试元，占预算75%，基础A4及3kg安全承托有据，落60%至80%档；不评价未知寿命。", "evidence_state": "2026-10-28固定记录的同版公开报价及费用，非已复现结算价"},
+        "long_term_cost": {"score": null, "weight": 10, "evidence_ids": ["F1-COMMON-2"], "reason": "缺耗材、维修和持有期实际成本，低购价不能代替长期成本。", "evidence_state": "N/A，核心成本依据不足"},
+        "after_sales": {"score": 5, "weight": 10, "evidence_ids": ["F1-B-2", "F1-COMMON-2"], "reason": "7日未使用退货及12个月保修对应基础条款5分；实际执行、供件与维修支持未知。", "evidence_state": "仅公开承诺范围可评，执行未知"},
+        "rd_marketing": {"score": null, "weight": 5, "evidence_ids": ["F1-COMMON-2", "F1-B-1"], "reason": "缺可归属成果及整体宣传兑现依据，不从参数存在推定研发表现。", "evidence_state": "N/A，整体依据不足"},
+        "labor": {"score": null, "weight": 5, "evidence_ids": ["F1-COMMON-2"], "reason": "缺实际用工资料，不默认中位或无争议加分。", "evidence_state": "N/A，缺实际主体用工证据"}
+      },
+      "safety": [
+        {"item": "T-架体稳定", "state": "通过", "evidence_ids": ["F1-COMMON-1"], "reason": "同版独立验收已匹配型号、样品及签发者，3kg规定工况无倾覆；仅为题设虚构要求。"},
+        {"item": "T-边缘防护", "state": "通过", "evidence_ids": ["F1-COMMON-1"], "reason": "同版验收3kg工况无锐边暴露，题设已说明覆盖全部相关关键安全项目。"}
+      ],
+      "purchase_status": "仅适合优先核验",
+      "status_reason": "物理适配、3kg安全、75测试元公开必要支出、现货、配送和基础条款已有据；核心优先项循环耐久完全缺材料，须取得同版3kg取放循环或可信长期使用记录后再判断购买。缺证不是质量缺陷或安全不通过。",
+      "negative_events": [],
+      "aggregate": {"kind": "partial", "numerator": 33, "denominator": 45, "included_dimensions": ["fit", "value", "after_sales"], "formula": "20*8/10 + 15*8/10 + 10*5/10 = 16+12+5 = 33；分母20+15+10=45"}
+    }
+  ],
+  "comparison": {
+    "order_type": "conditional",
+    "candidate_order": ["F1-A", "F1-B"],
+    "reason": "按本题日常3kg且稳定耐久优先，接受已知卡涩及标示取舍时，架甲先进入决策，架乙先补耐久材料；54/80与33/45项目不同，不直接排总分。共同适配、价值及条款均33/45，架乙便宜4测试元仍属同一价值档，不能由无已知缺点推定更耐久。",
+    "unresolved": ["架乙同版3kg循环耐久与长期顺畅表现未知。", "两款实际维修/持有成本、售后执行、研发及实际用工资料不足；未据此填分或机械限制架甲购买。", "仅使用2026-10-28固定虚构报价与记录；没有现实购链、优惠领取、结算或2026-10-30重新核价证据。"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "round": "r2",
+  "observed_runs": 15,
+  "expected_runs": 15,
+  "machine_checks": "passed",
+  "problems": [],
+  "semantic_review": "separate_required",
+  "scope": "fictional materials only; no real product or client-invocation claim"
+}

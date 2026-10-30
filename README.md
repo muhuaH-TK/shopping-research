@@ -2,7 +2,7 @@
 
 [中文](README.md) | [English](README.en.md)
 
-**版本：v1.2.3**
+**版本：v1.3.0 · 试用版** · [版本变更](CHANGELOG.md) · [验证范围](VALIDATION.md)
 
 面向消费者购买决策的 Codex 技能。根据用途、预算和硬条件研究商品，核对质量、安全、价格、口碑、长期成本和企业情况，交付具体版本、购买渠道、主要取舍及证据缺口。
 
@@ -83,6 +83,16 @@
 
 ## 安装
 
+### 底稿、复核与默认留档
+
+每次交付默认保存完整报告、[研究底稿/证据索引](skills/shopping-research/references/research-workbook.md)、复核记录及运行版本/验收记录，并核对实际保存结果。优先由分开上下文的代理先读需求和原始证据、再对照草稿；不可用时如实披露同代理复核。重要分歧须解决或保留购买限制，不能平均分掩盖。
+
+按[复核与留档规则](skills/shopping-research/references/review-and-archive.md)使用本项目或当前任务可写的输出目录；保存失败明确交代成功范围，不把聊天展示当作文件已经保存。重要字段分别标注本轮复核、沿用、失效或待核，一个报价更新不代表其他资料同步更新。
+
+[品类审查卡](skills/shopping-research/references/category-cards.md)提供枕头、洗护、电器和骑行用品的查证重点与证据边界，不是品牌白名单、认证配额或已验证商品清单。
+
+### 安装方式
+
 在支持 Codex 技能的环境中，可使用内置的 `$skill-installer`，提出：
 
 ```text
@@ -114,6 +124,10 @@
 ```text
 README.md
 README.en.md
+LICENSE
+CHANGELOG.md
+VALIDATION.md
+tests/                  # 明确虚构的固定测试及实际评分结果
 skills/
   shopping-research/
     SKILL.md
@@ -122,3 +136,9 @@ skills/
 ```
 
 详细方法来源及采用边界见 [adapted-methods.md](skills/shopping-research/references/adapted-methods.md)。外部参考不自动授予其服务权限，也不代表本仓库继承外部项目的许可证。
+
+## 测试与许可
+
+[固定测试](tests/README.md)用于检验评分和状态的一致性，完整材料与实际执行结果分开保存，盲评不提供验收答案。真实商品研究、需求与效果对照仅内部留档，不整理成公开案例。具体已观察、失败及未验证范围见[验证说明](VALIDATION.md)，规则齐备不等于购买能力已通过。
+
+项目可授权的原创技能、模板和虚构测试采用[MIT许可](LICENSE)，版权声明为muhuaH-TK。第三方引用、商品材料及来源另行标明，不随本项目一并授予权利。
